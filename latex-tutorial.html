@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Setup Guide</title>
+</head>
+<body>
+    <a href="index.html">Home Page</a>
+    <h1>Install VS Code</h1>
+    <div class="step-list">
+        <ol>
+            <li>Go to <a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></li>
+            <li>Download for your platform</li>
+            <li>Install</li>
+        </ol>
+    </div>
+
+    <h1>Get a LaTeX Compiler</h1>
+    <p>Either MikTeX or TeX Live is good, I use TeX Live. Follow the instructions on <a href="https://www.tug.org/texlive/">https://www.tug.org/texlive/</a> to install for your platform. If on Linux just use your package manager.</p>
+
+    <h1>Install Git for version control</h1>
+    <p>Grab git from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>. Again, package manager on Linux. On Windows the default settings are usually fine but you probably want to change your editor to VS Code rather than vim if you're not insane.</p>
+
+    <h1>Make a Github account</h1>
+    <p>VS Code isn't connected to the cloud like LaTeX is, so we need a way to sync our changes across devices. Github will allow us to connect with Git and save our code in a remote repository that we can clone onto other devices.</p>
+
+    <h1>VS Code Setup</h1>
+    <div class="step-list">
+        <ol>
+            <li>Go to the extension store and grab LaTeX Workshop by James Yu. Gives syntax highlighting, snippets, easy compilation with your LaTeX compiler, etc.</li>
+            <li>Go to File > Auto Save in order to make sure your files auto save as you type into them (note that this is not the same as pushing changes to our Github repo!)</li>
+            <li>Sign in to your Github account to allow us to make repos on Github.</li>
+            <li>Open an empty folder where you want your project. Usually I place mine in Documents/TeX/"project name here".</li>
+            <li>Create a file called main.tex (this is where we'll write our TeX)</li>
+            <li>Create a .gitignore file with the contents listed <a href=".gitignore">here</a> (this is so git will ignore all the intermediate files and only track the main.tex file)
+            </li>
+            <li>Click the source control button on the left side of VS Code and initialize the repository</li>
+            <li>Click Publish Branch in order to get your code on Github. You can make the repo public or private, I choose private so people can't access my stuff.</li>
+        </ol>
+    </div>
+
+    <h1>Ready to Go!</h1>
+    <p>You are now ready to start writing LaTeX in VS Code! Whenever you are done making changes to your document, make sure to go to the source control tab on the left side of VS Code and commit and sync your changes. This will push whatever local changes you have made into your remote repo on Github. Whenever you go on a different computer to work on your document, be sure to pull any changes from the cloud first so you don't have to deal with merge conflicts.</p>
+
+    <h1>Extra Credit</h1>
+    <h2>Sync with Overleaf</h2>
+    <p>You can sync a Github project with Overleaf if you have Overleaf Premium. Go on Overleaf and click New Project and select import from Github to do so.</p>
+
+    <h2>VS Code Themes</h2>
+    <p>VS Code is very theme-able. Go to File > Preferences > Themes to choose a color theme. You can install extra themes from the Extensions Store. I like Catppuccin Mocha so I installed that one from there. You can also change the font in your settings as well.</p>
+</body>
+</html>
